@@ -25,15 +25,6 @@
  *  # MISC
  *
  * =================================================================== */
-
-
-/* ===================================================================
- * # imports 
- *
- * ------------------------------------------------------------------- */
- @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
- @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
- 
  
  /* ===================================================================
   * # normalize
@@ -923,24 +914,3 @@
      text-align: center;
  }
  
- 
- /*
-      FILE ARCHIVED ON 03:18:38 May 24, 2022 AND RETRIEVED FROM THE
-      INTERNET ARCHIVE ON 19:35:02 Jan 16, 2025.
-      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
- 
-      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-      SECTION 108(a)(3)).
- */
- /*
- playback timings (ms):
-   captures_list: 0.636
-   exclusion.robots: 0.018
-   exclusion.robots.policy: 0.008
-   esindex: 0.011
-   cdx.remote: 134.503
-   LoadShardBlock: 253.985 (3)
-   PetaboxLoader3.datanode: 319.011 (4)
-   load_resource: 356.828
-   PetaboxLoader3.resolve: 278.452
- */
