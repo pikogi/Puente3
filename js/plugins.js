@@ -116,26 +116,3 @@
         }
     });
 })(jQuery);
-
-/* AOS - Animate On Scroll Library */
-!function(e){
-    "use strict";
-    var t = function(e, t){
-        return e.getAttribute("data-aos-"+t)
-    };
-    e.AOS = {
-        init: function(options){
-            options = options || {};
-            
-            var initialise = function(){
-                var elements = document.querySelectorAll("[data-aos]");
-                Array.prototype.forEach.call(elements, function(el){
-                    var aosAnimation = el.getAttribute("data-aos");
-                    el.className += " aos-init " + aosAnimation;
-                });
-            };
-
-            document.addEventListener("DOMContentLoaded", initialise);
-        }
-    };
-}(window);

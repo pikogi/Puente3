@@ -18,3 +18,4 @@ https://cdnjs.com/libraries/jquery-placeholder
 https://cdnjs.com/libraries/jquery-validate
 https://cdnjs.com/libraries/photoswipe/4.1.3
 https://cdnjs.com/libraries/slick-carousel
+https://michalsnik.github.io/aos/
