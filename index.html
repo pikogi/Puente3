@@ -289,10 +289,10 @@
                     <div class="masonry__brick">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <img src="images/weed.jpg" alt="Trigo">
+                                <img src="images/Motos_resized.jpg" alt="Motos">
                                 <div class="item-folio__text">
-                                    <h3 class="item-folio__title">Trigo</h3>
-                                    <p class="item-folio__cat">Exportación</p>
+                                    <h3 class="item-folio__title">Motos</h3>
+                                    <p class="item-folio__cat">Importación</p>
                                 </div>
                                 <a href="images/weed.jpg" class="item-folio__project-link" title="Ver Imagen" data-lightbox="gallery">
                                 <i class="fa fa-plus"></i>
@@ -316,7 +316,7 @@
         <div class="row contact-content" data-aos="fade-up">
             <div class="contact-primary">
                 <h3 class="h6">Envíanos un Mensaje</h3>
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                <form name="contactForm" id="contactForm" action="https://formsubmit.co/giaoliva1@gmail.com" method="POST" novalidate="novalidate">
                     <fieldset>
                         <div class="form-field">
                             <input name="contactName" type="text" id="contactName" placeholder="Tu Nombre" value="" minlength="2" required aria-required="true" class="full-width">
@@ -327,9 +327,10 @@
                         <div class="form-field">
                             <textarea name="contactMessage" id="contactMessage" placeholder="Tu Mensaje" rows="10" cols="50" required aria-required="true" class="full-width"></textarea>
                         </div>
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-field">
                             <button type="submit" class="full-width btn--primary">Enviar</button>
-                            <div class="submit-loader">
+                            <div class="submit-loader" style="display:none;">
                                 <div class="text-loader">Enviando...</div>
                                 <div class="s-loader">
                                     <div class="bounce1"></div>
@@ -341,12 +342,42 @@
                     </fieldset>
                 </form>
                 <!-- mensajes de respuesta del formulario -->
-                <div class="message-warning">
+                <div class="message-warning" style="display:none; color: red;">
                     Algo salió mal. Por favor intenta de nuevo.
                 </div>
-                <div class="message-success">
+                <div class="message-success" style="display:none; color: green;">
                     Mensaje enviado, ¡gracias!<br>
                 </div>
+                
+                <script>
+                document.getElementById("contactForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    
+                    let form = this;
+                    let formData = new FormData(form);
+                    let successMessage = document.querySelector(".message-success");
+                    let errorMessage = document.querySelector(".message-warning");
+                    let loader = document.querySelector(".submit-loader");
+                
+                    loader.style.display = "block";
+                
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                    }).then(response => {
+                        loader.style.display = "none";
+                        if (response.ok) {
+                            successMessage.style.display = "block";
+                            form.reset();
+                        } else {
+                            errorMessage.style.display = "block";
+                        }
+                    }).catch(() => {
+                        loader.style.display = "none";
+                        errorMessage.style.display = "block";
+                    });
+                });
+                </script>
             </div>
             <div class="contact-secondary">
                 <div class="contact-info">
